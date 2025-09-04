@@ -1,0 +1,20 @@
+Mobility
+Vehicle type: 4-wheeled, single driving axle (rear-wheel drive or front-wheel drive as configured).
+Drive module: Single DC gear motor coupled to a shaft that drives both wheels (via a solid axle or belt coupling). This ensures no electronic one-motor-per-side differential.
+Steering: Metal-geared hobby servo (≥8–10 kg·cm torque) on a servo horn and steering linkage.
+
+Power
+Main battery: LiPo or Li-ion pack sized to supply Raspberry Pi, motor driver, sensors and servo for at least 20–30 minutes of continuous operation.
+Power distribution: Separate regulated 5V rail for Raspberry Pi (buck converter) and a motor supply rail for DC motor (regulated to motor specs). Servo may be powered from 5V rail but with adequate decoupling.
+Emergency cutoff: A physical master ON/OFF switch that disconnects the battery.
+
+Sensing
+Primary vision: Web Camera Module for lane and sign detection.
+Line sensors: 3–5 IR reflectance sensors (used as a short-range backup for line centering on high-contrast lanes).
+Distance sensor(s): HC-SR04 ultrasonic modules or a short-range LiDAR (e.g., VL53L0X/XL) for obstacle detection and parking alignment.
+IMU/Gyro: MPU-6050 or similar sensor to estimate heading, measure slip and help in inertial stabilization for corner localization.
+
+Obstacle management
+Traffic pillars: Recognize red vs green pillars using color segmentation in HSV space or a lightweight CNN. Pillars indicate lane side (red: keep right, green: keep left).
+Collision strategy: If a pillar is displaced slightly within its seat circle, no penalty. If completely outside seat circle or vehicle touches parking limits or moves pillars beyond allowed tolerances, stop immediately and mark failure for that attempt.
+Parking: Detect parking lot entry using vision and distance sensors; execute parallel parking maneuver using a finite-state parking routine (approach, align, reverse-steer-in, straighten).
