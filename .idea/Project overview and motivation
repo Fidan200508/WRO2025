@@ -1,9 +1,0 @@
-This project implements an autonomous small-scale vehicle built around a Raspberry Pi that satisfies the WRO Future Engineers rules for the 2025 season. The vehicle is designed as a four-wheeled platform with a single driving axle and a single steering actuator. The drive system uses a DC gear motor (single motor driving both wheels through a mechanical differential-style shaft) while steering is handled by a servo motor attached to a steer link.
-
-Motivation: Our goal is to design a robust, repeatable platform that can complete three fully autonomous laps in both the Open Challenge and the Obstacle Challenge, handle randomly placed track walls and colored traffic signs, perform parallel parking, and follow the competition’s starting, repair and safety rules.
-
-Key design priorities:
-Reliability and repeatability under randomized track conditions.
-Clear separation of concerns in software: perception, localization, planning, control.
-Readable, documented code and reproducible hardware.
-Compliance with weight and dimension limits (≤1.5 kg; ≤300×200 mm and ≤300 mm height).
