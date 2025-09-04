@@ -84,16 +84,11 @@ Path Planning: Determines optimal speed and steering angle using sensor and perc
 
 Clone the repository:
 
-git clone https://github.com/YourUsername/RPi-SelfDrivingCar.git
-cd RPi-SelfDrivingCar/software
-
+git clone 
 
 Install dependencies:
 
 pip install -r requirements.txt
-
-
-Run the main program:
 
 python main.py
 
