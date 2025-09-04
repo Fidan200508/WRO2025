@@ -1,0 +1,13 @@
+To satisfy WRO rules:
+
+We implement two-button start: one physical power switch to turn the vehicle ON (powering all electronics), and a separate START button which when pressed will begin the autonomous program loop.
+
+No additional human interactions during rounds.
+
+We implement a clearly labelled emergency stop that instantly cuts motor power but leaves the logic board powered for data collection.
+
+Startup sequence in main.py:
+Power ON switch powers the system.
+Health checks run (sensor presence, battery level, motor driver alive, no errors).
+WAIT for user to press START button.
+When START pressed, LED blinks and the autonomous process begins.
