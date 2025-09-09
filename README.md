@@ -103,6 +103,13 @@ Vehicle Photo in 3D
 
 We created this model on Tinkercad 3D program.
 
+6 Vehicle photos
+
+1 vehicle video
+
+2 team photos
+
+
 10. GitHub Commit History
 
 First commit: ≥ 1/5 of code, ≥ 2 months before competition.
